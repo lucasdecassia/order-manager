@@ -9,6 +9,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @Table(name = "orders")
+@NoArgsConstructor
 public class Order {
 
     @Id
@@ -30,7 +31,6 @@ public class Order {
 
     public Order(Double amount, String clientId, String clientEmail) {
         validade(amount);
-        this.orderId = orderId;
         this.amount = amount;
         this.clientId = clientId;
         this.clientEmail = clientEmail;
